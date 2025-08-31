@@ -171,3 +171,37 @@
         // Initialize display
         updateDisplay();
     
+
+
+        // ✅ Keyboard support
+document.addEventListener('keydown', (event) => {
+    if (!isNaN(event.key)) { 
+        // Number keys 0-9
+        addDigit(event.key);
+        updateDisplay();
+    } else if (event.key === '.') {
+        addDecimal();
+        updateDisplay();
+    } else if (event.key === '+' || event.key === '-') {
+        chooseOperation(event.key);
+        updateDisplay();
+    } else if (event.key === '*' || event.key === 'x' || event.key === 'X') {
+        chooseOperation('×');
+        updateDisplay();
+    } else if (event.key === '/' || event.key === '÷') {
+        chooseOperation('÷');
+        updateDisplay();
+    } else if (event.key === '%') {
+        chooseOperation('%');
+        updateDisplay();
+    } else if (event.key === 'Enter' || event.key === '=') {
+        calculate();
+        updateDisplay();
+    } else if (event.key === 'Backspace') {
+        deleteDigit();
+        updateDisplay();
+    } else if (event.key === 'Escape') {
+        clear();
+        updateDisplay();
+    }
+});
