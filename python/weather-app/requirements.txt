@@ -1,0 +1,11 @@
+# Project Requirements for Weather App
+
+You will need to install the following packages before running the project:
+
+pip install requests
+
+# Note:
+# - "json" and "datetime" are built-in Python modules, so you don't need to install them.
+# - Make sure you have Python 3.10+ installed.
+
+Also get your API from OpenWather and paste it in this line #API_KEY = "your API key here"#
