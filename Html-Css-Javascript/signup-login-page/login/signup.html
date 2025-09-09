@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication System</title>
+    <meta name="description" content="Modern Authentication System - Login, Signup, and Password Recovery" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+    <div class="auth-container">
+        <!-- Login Form -->
+        <div id="loginForm" class="form-section active">
+            <h1>Welcome Back</h1>
+            <div id="loginMessage"></div>
+            
+            <div class="form-group">
+                <label for="loginEmail">Email</label>
+                <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                <span class="field-error" id="loginEmailError"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="loginPassword">Password</label>
+                <div class="password-container">
+                    <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                    <button type="button" class="toggle-password" onclick="togglePassword('loginPassword')">👁</button>
+                </div>
+                <span class="field-error" id="loginPasswordError"></span>
+            </div>
+            
+            <div class="checkbox-container">
+                <input type="checkbox" id="rememberMe">
+                <label for="rememberMe" class="checkbox-label">Remember me</label>
+            </div>
+            
+            <button class="btn" onclick="handleLogin()">Sign In</button>
+            
+            <div class="form-links">
+                <a href="#" class="form-link" onclick="showForm('forgotForm')">Forgot Password?</a>
+                <a href="#" class="form-link" onclick="showForm('signupForm')">Create Account</a>
+            </div>
+        </div>
+
+        <!-- Signup Form -->
+        <div id="signupForm" class="form-section">
+            <h1>Create Account</h1>
+            <div id="signupMessage"></div>
+            
+            <div class="form-group">
+                <label for="signupName">Full Name</label>
+                <input type="text" id="signupName" placeholder="Enter your full name" required>
+                <span class="field-error" id="signupNameError"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="signupEmail">Email</label>
+                <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                <span class="field-error" id="signupEmailError"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="signupPassword">Password</label>
+                <div class="password-container">
+                    <input type="password" id="signupPassword" placeholder="Enter your password" required>
+                    <button type="button" class="toggle-password" onclick="togglePassword('signupPassword')">👁</button>
+                </div>
+                <span class="field-error" id="signupPasswordError"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <div class="password-container">
+                    <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+                    <button type="button" class="toggle-password" onclick="togglePassword('confirmPassword')">👁</button>
+                </div>
+                <span class="field-error" id="confirmPasswordError"></span>
+            </div>
+            
+            <button class="btn" onclick="handleSignup()">Create Account</button>
+            
+            <div class="form-links">
+                <a href="#" class="form-link" onclick="showForm('loginForm')">Already have an account? Sign In</a>
+            </div>
+        </div>
+
+        <!-- Forgot Password Form -->
+        <div id="forgotForm" class="form-section">
+            <h1>Reset Password</h1>
+            <div id="forgotMessage"></div>
+            
+            <div class="form-group">
+                <label for="forgotEmail">Email</label>
+                <input type="email" id="forgotEmail" placeholder="Enter your email" required>
+                <span class="field-error" id="forgotEmailError"></span>
+            </div>
+            
+            <div class="form-group" id="newPasswordGroup" style="display: none;">
+                <label for="newPassword">New Password</label>
+                <div class="password-container">
+                    <input type="password" id="newPassword" placeholder="Enter new password" required>
+                    <button type="button" class="toggle-password" onclick="togglePassword('newPassword')">👁</button>
+                </div>
+                <span class="field-error" id="newPasswordError"></span>
+            </div>
+            
+            <button class="btn" id="resetBtn" onclick="handleForgotPassword()">Send Reset Link</button>
+            
+            <div class="form-links">
+                <a href="#" class="form-link" onclick="showForm('loginForm')">Back to Sign In</a>
+            </div>
+        </div>
+
+        <!-- Welcome Section -->
+        <div id="welcomeSection" class="welcome-section">
+            <h1>Welcome!</h1>
+            <div class="user-info">
+                <p style="color: white; margin-bottom: 10px;">Hello, <span id="welcomeUserName"></span>!</p>
+                <p style="color: rgba(255, 255, 255, 0.8); font-size: 14px;">You have successfully logged in.</p>
+            </div>
+            <button class="btn logout-btn" onclick="handleLogout()">Logout</button>
+        </div>
+    </div>
+<script src="signup.js"></script>
+</body>
+</html>
