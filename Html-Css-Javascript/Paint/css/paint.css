@@ -1,0 +1,133 @@
+:root {
+    --toolbar-bg: #f0f0f0;
+    --canvas-bg: white;
+    --border-color: #ccc;
+    --active-tool-bg: #e0e0e0;
+    --active-color-border: #333;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+
+.paint-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}
+
+.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+    gap: 10px;
+}
+
+.tool-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.tool-btn,
+.action-buttons button {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.2s;
+    border-radius: 4px;
+}
+
+.tool-btn:hover,
+.action-buttons button:hover {
+    background-color: var(--active-tool-bg);
+}
+
+.tool-btn.active-tool {
+    background-color: var(--active-tool-bg);
+    border-color: #777;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#brush-size {
+    cursor: pointer;
+}
+
+.color-palette {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.color-box {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #999;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.active-color-indicator {
+    width: 32px;
+    height: 32px;
+    border: 2px solid var(--active-color-border);
+    border-radius: 50%;
+    margin-left: 5px;
+    transition: border-color 0.2s;
+}
+
+#custom-color-picker {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+    -webkit-appearance: none;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#custom-color-picker::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+#custom-color-picker::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+}
+
+.fill-options {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#paint-canvas {
+    background-color: var(--canvas-bg);
+    cursor: crosshair;
+    display: block;
+}
+
+.action-buttons {
+    margin-left: auto;
+}

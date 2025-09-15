@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Paint</title>
+    <link rel="stylesheet" href="css/paint.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="paint-container">
+
+        <div class="toolbar">
+            <div class="tool-group">
+                <button class="tool-btn active-tool" data-tool="pencil" title="Pencil"><i class="fas fa-pencil-alt"></i></button>
+                <button class="tool-btn" data-tool="eraser" title="Eraser"><i class="fas fa-eraser"></i></button>
+                <button class="tool-btn" data-tool="fill" title="Fill"><i class="fas fa-fill-drip"></i></button>
+                <button class="tool-btn" data-tool="line" title="Line"><i class="fas fa-grip-lines"></i></button>
+                <button class="tool-btn" data-tool="rectangle" title="Rectangle"><i class="far fa-square"></i></button>
+                <button class="tool-btn" data-tool="circle" title="Circle"><i class="far fa-circle"></i></button>
+                <button class="tool-btn" data-tool="picker" title="Color Picker"><i class="fas fa-eye-dropper"></i></button>
+            </div>
+
+            <div class="tool-group">
+                <label for="brush-size">Size:</label>
+                <input type="range" id="brush-size" min="1" max="50" value="5">
+            </div>
+            
+            <div class="color-palette">
+                <div class="color-box" style="background-color: black;" data-color="black"></div>
+                <div class="color-box" style="background-color: red;" data-color="red"></div>
+                <div class="color-box" style="background-color: green;" data-color="green"></div>
+                <div class="color-box" style="background-color: blue;" data-color="blue"></div>
+                <div class="color-box" style="background-color: yellow;" data-color="yellow"></div>
+                <div class="color-box" style="background-color: white;" data-color="white"></div>
+
+                <input type="color" id="custom-color-picker" value="#000000" title="Custom Color">
+                <div class="active-color-indicator" style="background-color: black;"></div>
+            </div>
+
+            <div class="tool-group fill-options">
+                <label>Shape Fill:</label>
+                <input type="checkbox" id="fill-shape" checked>
+                <span>Filled</span>
+            </div>
+
+            <div class="tool-group action-buttons">
+                <button id="undo-btn" title="Undo"><i class="fas fa-undo"></i></button>
+                <button id="redo-btn" title="Redo"><i class="fas fa-redo"></i></button>
+                <button id="new-btn" title="New"><i class="fas fa-file"></i></button>
+                <button id="save-btn" title="Save"><i class="fas fa-download"></i></button>
+            </div>
+        </div>
+
+        <canvas id="paint-canvas"></canvas>
+
+    </div>
+
+    <script src="paint.js"></script>
+</body>
+</html>
