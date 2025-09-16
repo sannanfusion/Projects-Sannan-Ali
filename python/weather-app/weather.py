@@ -7,7 +7,7 @@ def get_weather(city_name):
     Fetches weather data for a given city using the OpenWeatherMap API
     """
     # API configuration
-    API_KEY = "YOUR API KEY HERE" 
+    API_KEY = "YOUR API KEY HERE GET IT FROM OPEN WEATHER.ORG" 
     BASE_URL = "http://api.openweathermap.org/data/2.5/weather"
     
     # Request parameters
@@ -29,7 +29,7 @@ def get_weather(city_name):
         return data
         
     except requests.exceptions.RequestException as e:
-        print(f"Error fetching weather data: {e}")
+        print(f"Error while fetching weather data: {e}")
         return None
     except json.JSONDecodeError:
         print("Error parsing weather data")
