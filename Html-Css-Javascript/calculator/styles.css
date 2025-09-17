@@ -100,7 +100,7 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#C9DEF4", en
         
         .function {
             background-color: #A5A5A5;
-            color: black;
+            color: rgb(24, 24, 24);
         }
         
         .function:hover {

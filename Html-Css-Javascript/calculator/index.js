@@ -10,7 +10,7 @@
         let operation = undefined;
         let resetCurrentOperand = false;
         
-        // Update display
+        // Update Display
         function updateDisplay() {
             currentOperandElement.textContent = currentOperand;
             if (operation != null) {
@@ -42,7 +42,7 @@
             }
         }
         
-        // Handle decimal point
+        //Handle decimal point
         function addDecimal() {
             if (resetCurrentOperand) {
                 currentOperand = '0.';
