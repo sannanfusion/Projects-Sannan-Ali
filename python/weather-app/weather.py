@@ -14,7 +14,7 @@ def get_weather(city_name):
     params = {
         'q': city_name,
         'appid': API_KEY,
-        'units': 'metric'  # Celsius
+        'units': 'metric'  # CELSIUS
     }
     
     try:
@@ -69,7 +69,7 @@ def main():
     Main function to run the weather application
     """
     print("🌤️  Weather Information Fetcher 🌤️")
-    print("Get current weather conditions for any city")
+    print(" Get current weather conditions for any city ")
     print("Type 'quit' to exit the program")
     
     while True:
@@ -89,7 +89,7 @@ def main():
         if weather_data:
             display_weather(weather_data, city_name)
         else:
-            print(f"Could not retrieve weather data for {city_name}.")
+            print(f" Could not retrieve weather data for {city_name}.")
 
 
 if __name__ == "__main__":

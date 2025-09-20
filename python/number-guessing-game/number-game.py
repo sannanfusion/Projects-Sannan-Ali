@@ -24,7 +24,7 @@ def number_guessing_game():
                 
                 # Check if guess is valid
                 if guess < 1 or guess > 100:
-                    print("Please enter a number between 1 and 100.")
+                    print(" Please Enter a Number Between 1 and 100.")
                     continue
                 
                 attempts += 1
