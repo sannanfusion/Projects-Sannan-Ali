@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Stop drawing/action
+    // Stop Drawing/Action
     function stopDrawing(e) {
         if (!isDrawing) return;
         isDrawing = false;
