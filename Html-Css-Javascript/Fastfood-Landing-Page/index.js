@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Sticky header with shadow on scroll
+    // Sticky header with shadow on Scroll
     const header = document.getElementById('header');
 
     if (header) {

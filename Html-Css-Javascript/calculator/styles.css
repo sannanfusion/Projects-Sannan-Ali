@@ -21,8 +21,8 @@ background: -webkit-linear-gradient(90deg, hsla(211, 66%, 87%, 1) 0%, hsla(348, 
 
 filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#C9DEF4", endColorstr="#F5CCD4", GradientType=1 );
             padding: 20px;
-        }
-        
+        }       
+               
         .calculator {
             width: 320px;
             background-color: #22252D;
