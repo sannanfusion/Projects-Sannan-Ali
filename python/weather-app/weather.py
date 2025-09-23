@@ -4,7 +4,7 @@ from datetime import datetime
 
 def get_weather(city_name):
     """
-    Fetches weather data for a given city using the OpenWeatherMap API
+    Fetches Weather data for a given city using the OpenWeatherMap API.
     """
     # API configuration
     API_KEY = "YOUR API KEY HERE GET IT FROM OPEN WEATHER.ORG" 
