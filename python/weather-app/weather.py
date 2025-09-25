@@ -14,7 +14,7 @@ def get_weather(city_name):
     params = {
         'q': city_name,
         'appid': API_KEY,
-        'units': 'metric'  # CELSIUS
+        'units': 'metric'  # Celsius
     }
     
     try:
@@ -69,14 +69,14 @@ def main():
     Main function to run the weather application
     """
     print("🌤️  Weather Information Fetcher 🌤️")
-    print(" Get current weather conditions for any city ")
+    print(" Get current weather conditions for any City ")
     print("Type 'quit' to exit the program")
     
     while True:
         city_name = input("\nEnter city name: ").strip()
         
         if city_name.lower() in ['quit', 'exit', 'q']:
-            print("Goodbye! 👋")
+            print(" Goodbye! 👋")
             break
             
         if not city_name:

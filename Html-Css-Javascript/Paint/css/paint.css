@@ -64,7 +64,7 @@ body {
 
 .tool-btn.active-tool {
     background-color: var(--active-tool-bg);
-    border-color: #777;
+    border-color: #807f7fff;
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
