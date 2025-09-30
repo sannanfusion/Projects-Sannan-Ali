@@ -67,7 +67,7 @@
                 }
             }
             
-            // Event listeners for image upload
+            // Event listeners for Image upload
             imageUploadArea.addEventListener('click', () => imageInput.click());
             
             imageUploadArea.addEventListener('dragover', (e) => {
