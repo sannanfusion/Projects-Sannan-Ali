@@ -13,7 +13,7 @@ import time
 import sys
 
 def open_notepad():
-    """Open Notepad application on Windows"""
+    """Opens Notepad application on Windows"""
     try:
         print("Opening Notepad...")
         subprocess.Popen(['notepad.exe'])
@@ -21,7 +21,7 @@ def open_notepad():
         print("Notepad opened successfully.")
         return True
     except Exception as e:
-        print(f"Error opening Notepad: {e}")
+        print(f"Error Opening Notepad: {e}")
         return False
 
 def type_text(text):
@@ -63,7 +63,7 @@ def main():
     """Main function to run the Voice-to-Text Notepad Assistant"""
     print("=" * 50)
     print("Voice-to-Text Notepad Assistant")
-    print("Say 'stop program' anytime to exit")
+    print("Say 'Stop program' anytime to exit")
     print("=" * 50)
     
     # Open Notepad
