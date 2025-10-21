@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Apartments - MareSereno</title>
+    <meta name="description" content="Discover our selection of premium accommodations, ranging from cozy studios to luxurious penthouses.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="container nav-container">
+            <div class="nav-left">
+                <div class="language-selector">
+                    <select id="languageSelect">
+                        <option value="en">EN</option>
+                        <option value="it">IT</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <ul class="nav-links desktop-nav">
+                <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                <li><a href="apartments.html" class="nav-link active" data-i18n="nav.apartments">Apartments</a></li>
+                <li><a href="amenities.html" class="nav-link" data-i18n="nav.amenities">Amenities</a></li>
+                <li><a href="gallery.html" class="nav-link" data-i18n="nav.gallery">Gallery</a></li>
+                <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+            
+            <div class="nav-right desktop-nav">
+                <button id="themeToggle" class="theme-toggle">
+                    <i data-lucide="sun" class="icon-light"></i>
+                    <i data-lucide="moon" class="icon-dark"></i>
+                </button>
+                <a href="booking.html" class="btn btn-primary" data-i18n="nav.bookNow">Book Now</a>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div class="mobile-nav">
+                <button id="themeToggleMobile" class="theme-toggle">
+                    <i data-lucide="sun" class="icon-light"></i>
+                    <i data-lucide="moon" class="icon-dark"></i>
+                </button>
+                <button id="mobileMenuToggle" class="mobile-menu-toggle">
+                    <i data-lucide="menu" class="menu-icon"></i>
+                    <i data-lucide="x" class="close-icon"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Overlay -->
+        <div id="mobileMenu" class="mobile-menu-overlay">
+            <div class="mobile-menu">
+                <div class="mobile-menu-content">
+                    <div class="mobile-menu-header">
+                        <div class="language-selector">
+                            <select id="languageSelectMobile">
+                                <option value="en">EN</option>
+                                <option value="it">IT</option>
+                            </select>
+                        </div>
+                    </div>
+                    <ul class="mobile-menu-links">
+                        <li><a href="index.html" class="mobile-menu-link" data-i18n="nav.home">Home</a></li>
+                        <li><a href="apartments.html" class="mobile-menu-link" data-i18n="nav.apartments">Apartments</a></li>
+                        <li><a href="amenities.html" class="mobile-menu-link" data-i18n="nav.amenities">Amenities</a></li>
+                        <li><a href="gallery.html" class="mobile-menu-link" data-i18n="nav.gallery">Gallery</a></li>
+                        <li><a href="contact.html" class="mobile-menu-link" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                    <a href="booking.html" class="btn btn-primary mobile-book-btn" data-i18n="nav.bookNow">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main style="padding-top: 80px;">
+        <section class="section">
+            <div class="container">
+                <div class="section-header animate-fade-in">
+                    <h1 class="section-title">Our Apartments & Rooms</h1>
+                    <p class="section-description">Discover our selection of premium accommodations, ranging from cozy studios to luxurious penthouses.</p>
+                </div>
+                
+                <div id="apartmentGrid" class="apartment-grid">
+                    <!-- Apartments will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column animate-fade-in">
+                    <h4 class="footer-title">MareSereno</h4>
+                    <p class="footer-description" data-i18n="footer.description">Luxurious beachfront apartments and hotel rooms with stunning sea views, offering the perfect blend of comfort and elegance for your dream vacation.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i data-lucide="facebook"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-column animate-fade-in">
+                    <h4 class="footer-title" data-i18n="footer.quickLinks">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="apartments.html" data-i18n="nav.apartments">Apartments</a></li>
+                        <li><a href="amenities.html" data-i18n="nav.amenities">Amenities</a></li>
+                        <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                        <li><a href="booking.html" data-i18n="nav.bookNow">Book Now</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column animate-fade-in">
+                    <h4 class="footer-title" data-i18n="footer.contact">Contact</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i data-lucide="map-pin"></i>
+                            <div>
+                                <span>123 Seaside Boulevard<br>Costa Bella, 12345<br>Italy</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="phone"></i>
+                            <span>+39 123 4567 890</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="mail"></i>
+                            <span>info@maresereno.com</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-column animate-fade-in">
+                    <h4 class="footer-title" data-i18n="footer.newsletter">Newsletter</h4>
+                    <p class="newsletter-description" data-i18n="footer.newsletterDesc">Subscribe to our newsletter for special deals and updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" data-i18n-placeholder="footer.yourEmail" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary newsletter-btn" data-i18n="footer.subscribe">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> MareSereno. <span data-i18n="footer.allRights">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
