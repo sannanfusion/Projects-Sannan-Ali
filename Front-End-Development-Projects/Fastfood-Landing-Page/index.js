@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Focus the first invalid field
                 const firstError = contactForm.querySelector('.error');
                 if (firstError) firstError.focus();
-                alert('Please fill in all fields correctly.');
+                alert('Please fill in all Fields Correctly.');
             }
         });
     }
