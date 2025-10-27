@@ -267,7 +267,7 @@
             transition: var(--transition);
         }
 
-        /* Hero Section */
+        /* Hero section */
         .hero {
             background: linear-gradient(to right, var(--white) 50%, var(--light) 50%);
             padding: var(--spacing-xl) 0;

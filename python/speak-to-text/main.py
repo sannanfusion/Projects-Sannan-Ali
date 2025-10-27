@@ -63,7 +63,7 @@ def main():
     """Main function to run the Voice-to-Text Notepad Assistant"""
     print("=" * 50)
     print("Voice-to-Text Notepad Assistant")
-    print("Say 'Stop program' anytime to exit")
+    print("Say 'Stop program' anytime to Exit")
     print("=" * 50)
     
     # Open Notepad
@@ -71,7 +71,7 @@ def main():
         print("Failed to open Notepad. Exiting program.")
         return
     
-    # Add small delay to ensure Notepad is active
+    # Add Small delay to ensure Notepad is active
     time.sleep(1)
     
     # Type starting message
