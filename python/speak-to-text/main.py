@@ -68,7 +68,7 @@ def main():
     
     # Open Notepad
     if not open_notepad():
-        print("Failed to open Notepad. Exiting program.")
+        print("Failed to open Notepad. Exiting Program.")
         return
     
     # Add Small delay to ensure Notepad is active
