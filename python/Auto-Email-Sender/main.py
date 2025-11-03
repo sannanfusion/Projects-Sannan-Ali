@@ -20,7 +20,7 @@ def main():
     print()
     
     # Get user's email (for display purposes)
-    user_email = input("Enter your email: ")
+    user_email = input("Enter your Email: ")
     print(f"Hello {user_email}!")
     print()
     
@@ -28,10 +28,10 @@ def main():
     to_email = input("To whom you want to send email: ")
     
     # Get email subject
-    subject = input("Enter email subject: ")
+    subject = input("Enter email Subject: ")
     
     # Get email body
-    print("\nWhat you want to say? (Press Enter twice to finish):")
+    print("\nWhat you want to say? (Press Enter  Key twice to Finish):")
     body_lines = []
     while True:
         line = input()
