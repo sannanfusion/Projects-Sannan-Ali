@@ -12,7 +12,7 @@ Shows Ping (ms)
 
 Automatically picks the best server
 
-📦 Required Module
+📦 Required Module To Run Program
 
 You must install the correct library:
 
