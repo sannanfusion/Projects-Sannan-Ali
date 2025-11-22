@@ -1,6 +1,6 @@
 # =====================================================
 # Voice-to-Text Notepad Assistant
-# Required Libraries (install these before running):
+# Required Libraries (install these before Running):
 # pip install SpeechRecognition
 # pip install pyautogui
 # pip install pyaudio
@@ -38,7 +38,7 @@ def listen_for_speech(recognizer, microphone):
     try:
         print("Listening... Start speaking now!")
         with microphone as source:
-            # Adjust for ambient noise and listen
+            # Adjust for Ambient noise and listen
             recognizer.adjust_for_ambient_noise(source, duration=0.5)
             audio = recognizer.listen(source, timeout=10, phrase_time_limit=5)
         
