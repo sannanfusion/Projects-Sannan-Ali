@@ -1,6 +1,7 @@
 # =====================================================
 # Voice-to-Text Notepad Assistant
-# Required Libraries (install these before Running):
+# Required Libraries (install these before R
+# unning):
 # pip install SpeechRecognition
 # pip install pyautogui
 # pip install pyaudio
