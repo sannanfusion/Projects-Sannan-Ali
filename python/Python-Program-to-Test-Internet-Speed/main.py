@@ -6,7 +6,7 @@ def simple_speed_test():
     
     st = speedtest.Speedtest()
     
-    # Get best server
+    # Get Best Server
     st.get_best_server()
     
     # Test speeds
