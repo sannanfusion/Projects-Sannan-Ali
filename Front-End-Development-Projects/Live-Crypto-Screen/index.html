@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoLive - Cryptocurrency Price Tracker</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+</head>
+<body>
+    <!-- Notification -->
+    <div class="notification" id="notification"></div>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-chart-line"></i>
+                    <h1>Crypto<span>Live</span></h1>
+                </div>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="dashboard-stats">
+            <div class="stat-card">
+                <div class="stat-title">
+                    <i class="fas fa-globe"></i>
+                    <span>MARKET CAP</span>
+                </div>
+                <div class="stat-value" id="marketCap">Loading...</div>
+                <div class="stat-change positive">
+                    <i class="fas fa-arrow-up"></i>
+                    <span>Loading...</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>24H VOLUME</span>
+                </div>
+                <div class="stat-value" id="volume">Loading...</div>
+                <div class="stat-change positive">
+                    <i class="fas fa-arrow-up"></i>
+                    <span>Loading...</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">
+                    <i class="fas fa-coins"></i>
+                    <span>ACTIVE CRYPTOS</span>
+                </div>
+                <div class="stat-value" id="activeCryptos">Loading...</div>
+                <div class="stat-change positive">
+                    <i class="fas fa-arrow-up"></i>
+                    <span>Loading...</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>DOMINANCE</span>
+                </div>
+                <div class="stat-value" id="dominance">Loading...</div>
+                <div class="stat-change negative">
+                    <i class="fas fa-arrow-down"></i>
+                    <span>Loading...</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="crypto-table-container">
+            <div class="table-header">
+                <h2>Top Cryptocurrencies</h2>
+                <div class="refresh-info">
+                    <span>Auto-refresh in <span id="countdown">30</span>s</span>
+                    <button class="refresh-btn" id="refreshBtn">
+                        <i class="fas fa-sync-alt"></i>
+                        Refresh Now
+                    </button>
+                </div>
+            </div>
+            <div class="table-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>24h Change</th>
+                            <th>Market Cap</th>
+                            <th>Last 7 Days</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cryptoTableBody">
+                        <tr>
+                            <td colspan="6" class="loading">
+                                <div class="spinner"></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="chart-container">
+            <div class="chart-header">
+                <h2 id="chartTitle">Price Chart</h2>
+                <div class="chart-actions">
+                    <button class="timeframe-btn active" data-days="1">24H</button>
+                    <button class="timeframe-btn" data-days="7">7D</button>
+                    <button class="timeframe-btn" data-days="30">30D</button>
+                    <button class="timeframe-btn" data-days="90">3M</button>
+                    <button class="timeframe-btn" data-days="365">1Y</button>
+                </div>
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="priceChart"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 CryptoLive - Real-time Cryptocurrency Price Tracker</p>
+            <p>Data provided by CoinGecko API</p>
+        </div>
+    </footer>
+<script src="index.js"></script>
+</body>
+</html>

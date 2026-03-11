@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image & Text to PDF Converter</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    
+</head>
+<body>
+    <h1>Image & Text to PDF Converter</h1>
+    <p class="description">Convert your images or text documents to PDF files quickly and easily.</p>
+    
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" data-tab="image-tab">Image to PDF</button>
+            <button class="tab" data-tab="text-tab">Text to PDF</button>
+        </div>
+        
+        <!-- Image To PDF Tab -->
+        <div id="image-tab" class="tab-content active">
+            <div class="upload-area" id="image-upload-area">
+                <div class="upload-icon" src="">📁</div>
+                <p class="upload-text">Drag & Drop your images here</p>
+                <p class="upload-subtext">or click to browse files (JPG, PNG, GIF, WebP)</p>
+                <input type="file" id="image-input" accept="image/*">
+            </div>
+            
+            <div class="preview-container" id="image-preview-container">
+                <h3 class="preview-title">Image Preview</h3>
+                <img id="image-preview" class="image-preview" alt="Image Preview">
+            </div>
+        </div>
+        
+        <!-- Text to PDF Tab -->
+        <div id="text-tab" class="tab-content">
+            <div class="upload-area" id="text-upload-area">
+                <div class="upload-icon">📄</div>
+                <p class="upload-text">Drag & Drop your text file here</p>
+                <p class="upload-subtext">or click to browse files (.txt)</p>
+                <input type="file" id="text-input" accept=".txt,text/plain">
+            </div>
+            
+            <div class="text-input-container">
+                <h3 class="preview-title">Or type your text below</h3>
+                <textarea id="text-input-area" class="text-input-area" placeholder="Type or paste your text here..."></textarea>
+            </div>
+            
+            <div class="preview-container" id="text-preview-container">
+                <h3 class="preview-title">Text Preview</h3>
+                <div id="text-preview" class="text-preview"></div>
+            </div>
+        </div>
+        
+        <div class="options">
+            <h3 class="option-title">PDF Options</h3>
+            <div class="option-group">
+                <div class="option-item">
+                    <label for="page-size">Page Size:</label>
+                    <select id="page-size">
+                        <option value="a4">A4</option>
+                        <option value="letter">Letter</option>
+                        <option value="legal">Legal</option>
+                    </select>
+                </div>
+                <div class="option-item">
+                    <label for="orientation">Orientation:</label>
+                    <select id="orientation">
+                        <option value="portrait">Portrait</option>
+                        <option value="landscape">Landscape</option>
+                    </select>
+                </div>
+                <div class="option-item">
+                    <label for="margin">Margin (mm):</label>
+                    <input type="number" id="margin" min="0" max="50" value="10">
+                </div>
+            </div>
+            <div class="option-group" id="image-options">
+                <div class="option-item">
+                    <label for="quality">Image Quality:</label>
+                    <select id="quality">
+                        <option value="1.0">High</option>
+                        <option value="0.8" selected>Medium</option>
+                        <option value="0.6">Low</option>
+                    </select>
+                </div>
+            </div>
+            <div class="option-group" id="text-options">
+                <div class="option-item">
+                    <label for="font-size">Font Size:</label>
+                    <select id="font-size">
+                        <option value="10">10pt</option>
+                        <option value="12" selected>12pt</option>
+                        <option value="14">14pt</option>
+                        <option value="16">16pt</option>
+                        <option value="18">18pt</option>
+                    </select>
+                </div>
+                <div class="option-item">
+                    <label for="line-height">Line Height:</label>
+                    <select id="line-height">
+                        <option value="1.0">1.0</option>
+                        <option value="1.2" selected>1.2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="2.0">2.0</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button id="convert-btn" class="button" disabled>
+                <i>🔄</i> Convert to PDF
+            </button>
+            <button id="download-btn" class="button" disabled>
+                <i>📥</i> Download PDF
+            </button>
+            <button id="reset-btn" class="button">
+                <i>🗑️</i> Reset
+            </button>
+        </div>
+        
+        <div id="status" class="status"></div>
+    </div>
+    
+    <div class="footer">
+        <p>Image & Text to PDF Converter &copy; 2025 | All conversions happen in your browser - your files are never uploaded to any server.</p>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
