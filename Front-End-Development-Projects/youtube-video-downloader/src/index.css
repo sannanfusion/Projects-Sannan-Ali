@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap');
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Backgrounds - warm light yellow/cream */
+    --background: 60 60% 96%;
+    --foreground: 140 30% 12%;
+
+    --card: 55 70% 98%;
+    --card-foreground: 140 30% 12%;
+
+    --popover: 55 70% 98%;
+    --popover-foreground: 140 30% 12%;
+
+    /* Primary - forest green */
+    --primary: 145 52% 28%;
+    --primary-foreground: 60 60% 97%;
+
+    /* Secondary - sage green */
+    --secondary: 120 25% 88%;
+    --secondary-foreground: 145 52% 20%;
+
+    --muted: 60 30% 92%;
+    --muted-foreground: 140 15% 42%;
+
+    /* Accent - lime/bright green */
+    --accent: 142 65% 42%;
+    --accent-foreground: 60 60% 97%;
+
+    --destructive: 0 84.2% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 120 20% 84%;
+    --input: 120 20% 84%;
+    --ring: 145 52% 28%;
+
+    --radius: 1rem;
+
+    /* Custom tokens */
+    --yellow-mist: 58 80% 90%;
+    --green-glow: 142 65% 42%;
+    --card-shadow: 0 4px 24px -4px hsl(145 52% 28% / 0.15);
+    --card-shadow-hover: 0 12px 40px -8px hsl(145 52% 28% / 0.25);
+    --gradient-hero: linear-gradient(135deg, hsl(60 60% 96%), hsl(120 40% 94%));
+    --gradient-primary: linear-gradient(135deg, hsl(145 52% 28%), hsl(142 65% 38%));
+    --gradient-accent: linear-gradient(135deg, hsl(142 65% 42%), hsl(100 60% 50%));
+
+    --sidebar-background: 60 50% 95%;
+    --sidebar-foreground: 140 30% 15%;
+    --sidebar-primary: 145 52% 28%;
+    --sidebar-primary-foreground: 60 60% 97%;
+    --sidebar-accent: 120 25% 88%;
+    --sidebar-accent-foreground: 145 52% 20%;
+    --sidebar-border: 120 20% 84%;
+    --sidebar-ring: 145 52% 28%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Outfit', sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'DM Serif Display', serif;
+  }
+
+  .card-shadow {
+    box-shadow: var(--card-shadow);
+  }
+
+  .card-shadow-hover {
+    box-shadow: var(--card-shadow-hover);
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  .animate-pulse-soft {
+    animation: pulse-soft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-bounce-in {
+    animation: bounce-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes bounce-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
