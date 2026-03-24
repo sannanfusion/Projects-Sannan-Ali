@@ -413,7 +413,8 @@
         function initDashboard() {
             fetchGlobalData();
             fetchCoinData();
-            fetchChartData('bitcoin', 1); // Default to Bitcoin
+            selectedCoinId = 'bitcoin';
+            fetchChartData(selectedCoinId, 1); // Default to Bitcoin
             startCountdown();
         }
 
