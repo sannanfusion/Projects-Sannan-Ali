@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileToggle.classList.toggle('open');
       const expanded = mobileToggle.getAttribute('aria-expanded') !== 'true';
       mobileToggle.setAttribute('aria-expanded', expanded);
+      localStorage.setItem('menuOpen', siteNav.classList.contains('open'));
     });
   }
 
@@ -195,4 +196,31 @@ document.addEventListener('DOMContentLoaded', () => {
       faqItems.forEach(i => i.classList.remove('active'));
     }
   });
+
+
+
+  // scroll to top button
+const scrollBtn = document.createElement('button');
+scrollBtn.textContent = '↑';
+scrollBtn.style.position = 'fixed';
+scrollBtn.style.bottom = '20px';
+scrollBtn.style.right = '20px';
+scrollBtn.style.display = 'none';
+scrollBtn.style.padding = '10px 14px';
+scrollBtn.style.borderRadius = '50%';
+scrollBtn.style.border = 'none';
+scrollBtn.style.cursor = 'pointer';
+scrollBtn.style.zIndex = '999';
+scrollBtn.style.backgroundColor = '#19310B';
+scrollBtn.style.color = '#fff';
+
+document.body.appendChild(scrollBtn);
+
+on(window, 'scroll', () => {
+  scrollBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
+});
+
+on(scrollBtn, 'click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 });
